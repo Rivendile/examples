@@ -1,0 +1,85 @@
+BytePS launching worker
+INFO:root:start with arguments Namespace(batch_size=32, benchmark=1, cpu_train=False, data_nthreads=4, data_train=None, data_train_idx='', data_val=None, data_val_idx='', disp_batches=10, dtype='float32', gc_threshold=0.5, gc_type='none', image_shape='3,224,224', initializer='default', kv_store='device', load_epoch=None, loss='', lr=0.1, lr_factor=0.1, lr_step_epochs='30,60', macrobatch_size=0, max_random_aspect_ratio=0.25, max_random_h=36, max_random_l=50, max_random_rotate_angle=10, max_random_s=50, max_random_scale=1, max_random_shear_ratio=0.1, min_random_scale=1, model_prefix=None, mom=0.9, monitor=0, network='vgg', num_classes=1000, num_epochs=1, num_examples=3232, num_layers=16, optimizer='sgd', pad_size=0, random_crop=1, random_mirror=1, rgb_mean='123.68,116.779,103.939', test_io=0, top_k=0, warmup_epochs=5, warmup_strategy='linear', wd=0.0001)
+INFO:root:start with arguments Namespace(batch_size=32, benchmark=1, cpu_train=False, data_nthreads=4, data_train=None, data_train_idx='', data_val=None, data_val_idx='', disp_batches=10, dtype='float32', gc_threshold=0.5, gc_type='none', image_shape='3,224,224', initializer='default', kv_store='device', load_epoch=None, loss='', lr=0.1, lr_factor=0.1, lr_step_epochs='30,60', macrobatch_size=0, max_random_aspect_ratio=0.25, max_random_h=36, max_random_l=50, max_random_rotate_angle=10, max_random_s=50, max_random_scale=1, max_random_shear_ratio=0.1, min_random_scale=1, model_prefix=None, mom=0.9, monitor=0, network='vgg', num_classes=1000, num_epochs=1, num_examples=3232, num_layers=16, optimizer='sgd', pad_size=0, random_crop=1, random_mirror=1, rgb_mean='123.68,116.779,103.939', test_io=0, top_k=0, warmup_epochs=5, warmup_strategy='linear', wd=0.0001)
+INFO:root:start with arguments Namespace(batch_size=32, benchmark=1, cpu_train=False, data_nthreads=4, data_train=None, data_train_idx='', data_val=None, data_val_idx='', disp_batches=10, dtype='float32', gc_threshold=0.5, gc_type='none', image_shape='3,224,224', initializer='default', kv_store='device', load_epoch=None, loss='', lr=0.1, lr_factor=0.1, lr_step_epochs='30,60', macrobatch_size=0, max_random_aspect_ratio=0.25, max_random_h=36, max_random_l=50, max_random_rotate_angle=10, max_random_s=50, max_random_scale=1, max_random_shear_ratio=0.1, min_random_scale=1, model_prefix=None, mom=0.9, monitor=0, network='vgg', num_classes=1000, num_epochs=1, num_examples=3232, num_layers=16, optimizer='sgd', pad_size=0, random_crop=1, random_mirror=1, rgb_mean='123.68,116.779,103.939', test_io=0, top_k=0, warmup_epochs=5, warmup_strategy='linear', wd=0.0001)
+INFO:root:start with arguments Namespace(batch_size=32, benchmark=1, cpu_train=False, data_nthreads=4, data_train=None, data_train_idx='', data_val=None, data_val_idx='', disp_batches=10, dtype='float32', gc_threshold=0.5, gc_type='none', image_shape='3,224,224', initializer='default', kv_store='device', load_epoch=None, loss='', lr=0.1, lr_factor=0.1, lr_step_epochs='30,60', macrobatch_size=0, max_random_aspect_ratio=0.25, max_random_h=36, max_random_l=50, max_random_rotate_angle=10, max_random_s=50, max_random_scale=1, max_random_shear_ratio=0.1, min_random_scale=1, model_prefix=None, mom=0.9, monitor=0, network='vgg', num_classes=1000, num_epochs=1, num_examples=3232, num_layers=16, optimizer='sgd', pad_size=0, random_crop=1, random_mirror=1, rgb_mean='123.68,116.779,103.939', test_io=0, top_k=0, warmup_epochs=5, warmup_strategy='linear', wd=0.0001)
+INFO:root:Launch BytePS process on GPU-2
+INFO:root:Launch BytePS process on GPU-0
+INFO:root:Launch BytePS process on GPU-1
+INFO:root:Launch BytePS process on GPU-3
+WARNING:root:Already bound, ignoring bind()
+WARNING:root:Already bound, ignoring bind()
+WARNING:root:Already bound, ignoring bind()
+WARNING:root:Already bound, ignoring bind()
+[15:35:34] src/operator/nn/./cudnn/./cudnn_algoreg-inl.h:97: Running performance tests to find the best convolution algorithm, this can take a while... (set the environment variable MXNET_CUDNN_AUTOTUNE_DEFAULT to 0 to disable)
+[15:35:34] src/operator/nn/./cudnn/./cudnn_algoreg-inl.h:97: Running performance tests to find the best convolution algorithm, this can take a while... (set the environment variable MXNET_CUDNN_AUTOTUNE_DEFAULT to 0 to disable)
+[15:35:34] src/operator/nn/./cudnn/./cudnn_algoreg-inl.h:97: Running performance tests to find the best convolution algorithm, this can take a while... (set the environment variable MXNET_CUDNN_AUTOTUNE_DEFAULT to 0 to disable)
+[15:35:34] src/operator/nn/./cudnn/./cudnn_algoreg-inl.h:97: Running performance tests to find the best convolution algorithm, this can take a while... (set the environment variable MXNET_CUDNN_AUTOTUNE_DEFAULT to 0 to disable)
+/usr/local/lib/python3.6/dist-packages/mxnet/module/base_module.py:502: UserWarning: Parameters already initialized and force_init=False. init_params call ignored.
+  allow_missing=allow_missing, force_init=force_init)
+/usr/local/lib/python3.6/dist-packages/mxnet/module/base_module.py:504: UserWarning: Optimizer created manually outside Module but rescale_grad is not normalized to 1.0/batch_size/num_workers (1.0 vs. 0.03125). Is this intended?
+  optimizer_params=optimizer_params)
+INFO:root:Epoch[0] Batch [0-10]	Speed: 205.90 samples/sec	accuracy=0.002841
+/usr/local/lib/python3.6/dist-packages/mxnet/module/base_module.py:502: UserWarning: Parameters already initialized and force_init=False. init_params call ignored.
+  allow_missing=allow_missing, force_init=force_init)
+/usr/local/lib/python3.6/dist-packages/mxnet/module/base_module.py:504: UserWarning: Optimizer created manually outside Module but rescale_grad is not normalized to 1.0/batch_size/num_workers (1.0 vs. 0.03125). Is this intended?
+  optimizer_params=optimizer_params)
+INFO:root:Epoch[0] Batch [0-10]	Speed: 212.81 samples/sec	accuracy=0.011364
+/usr/local/lib/python3.6/dist-packages/mxnet/module/base_module.py:502: UserWarning: Parameters already initialized and force_init=False. init_params call ignored.
+  allow_missing=allow_missing, force_init=force_init)
+/usr/local/lib/python3.6/dist-packages/mxnet/module/base_module.py:504: UserWarning: Optimizer created manually outside Module but rescale_grad is not normalized to 1.0/batch_size/num_workers (1.0 vs. 0.03125). Is this intended?
+  optimizer_params=optimizer_params)
+INFO:root:Epoch[0] Batch [0-10]	Speed: 207.68 samples/sec	accuracy=0.005682
+/usr/local/lib/python3.6/dist-packages/mxnet/module/base_module.py:502: UserWarning: Parameters already initialized and force_init=False. init_params call ignored.
+  allow_missing=allow_missing, force_init=force_init)
+/usr/local/lib/python3.6/dist-packages/mxnet/module/base_module.py:504: UserWarning: Optimizer created manually outside Module but rescale_grad is not normalized to 1.0/batch_size/num_workers (1.0 vs. 0.03125). Is this intended?
+  optimizer_params=optimizer_params)
+INFO:root:Epoch[0] Batch [0-10]	Speed: 205.66 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [10-20]	Speed: 200.14 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [10-20]	Speed: 200.14 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [10-20]	Speed: 200.12 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [10-20]	Speed: 200.15 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [20-30]	Speed: 214.96 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [20-30]	Speed: 214.95 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [20-30]	Speed: 214.95 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [20-30]	Speed: 214.94 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [30-40]	Speed: 210.86 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [30-40]	Speed: 210.85 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [30-40]	Speed: 210.83 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [30-40]	Speed: 210.84 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [40-50]	Speed: 203.99 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [40-50]	Speed: 203.98 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [40-50]	Speed: 203.98 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [40-50]	Speed: 203.96 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [50-60]	Speed: 210.56 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [50-60]	Speed: 210.53 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [50-60]	Speed: 210.52 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [50-60]	Speed: 210.49 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [60-70]	Speed: 214.34 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [60-70]	Speed: 214.31 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [60-70]	Speed: 214.29 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [60-70]	Speed: 212.21 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [70-80]	Speed: 212.27 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [70-80]	Speed: 212.27 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [70-80]	Speed: 212.25 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [70-80]	Speed: 214.31 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [80-90]	Speed: 216.92 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [80-90]	Speed: 216.94 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [80-90]	Speed: 216.73 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [80-90]	Speed: 216.73 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Batch [90-100]	Speed: 219.92 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Train-accuracy=0.000309
+INFO:root:Epoch[0] Batch [90-100]	Speed: 220.15 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Train-accuracy=0.001238
+INFO:root:Epoch[0] Time cost=18.674
+INFO:root:Epoch[0] Time cost=18.652
+INFO:root:Epoch[0] Batch [90-100]	Speed: 220.09 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Train-accuracy=0.000000
+INFO:root:Epoch[0] Batch [90-100]	Speed: 220.06 samples/sec	accuracy=0.000000
+INFO:root:Epoch[0] Time cost=18.673
+INFO:root:Epoch[0] Train-accuracy=0.000619
+INFO:root:Epoch[0] Time cost=18.675
+environ({'BYTEPS_LOCAL_RANK': '0', 'MAIL': '/var/mail/cluster', 'USER': 'cluster', 'SSH_CLIENT': '172.31.93.148 43668 2022', 'SHLVL': '1', 'HOME': '/home/cluster', 'DMLC_PS_ROOT_URI': '172.31.93.148', 'DISTRIBUTED_FRAMEWORK': 'byteps', 'DMLC_NUM_SERVER': '1', 'LOGNAME': 'cluster', 'DMLC_PS_ROOT_PORT': '8000', 'BYTEPS_SCHEDULING_CREDIT': '8000000', '_': '/usr/local/bin/bpslaunch', 'BYTEPS_LOCAL_SIZE': '4', 'DMLC_NUM_WORKER': '1', 'BYTEPS_SERVER_ENABLE_SCHEDULE': '1', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games', 'DMLC_ROLE': 'worker', 'SHELL': '/bin/bash', 'PWD': '/home/cluster', 'SSH_CONNECTION': '172.31.93.148 43668 172.31.93.148 2022', 'DMLC_WORKER_ID': '0', 'NVIDIA_VISIBLE_DEVICES': '0,1,2,3', 'BYTEPS_PARTITION_BYTES': '4096000'})=============0
+environ({'BYTEPS_LOCAL_RANK': '3', 'MAIL': '/var/mail/cluster', 'USER': 'cluster', 'SSH_CLIENT': '172.31.93.148 43668 2022', 'SHLVL': '1', 'HOME': '/home/cluster', 'DMLC_PS_ROOT_URI': '172.31.93.148', 'DISTRIBUTED_FRAMEWORK': 'byteps', 'DMLC_NUM_SERVER': '1', 'LOGNAME': 'cluster', 'DMLC_PS_ROOT_PORT': '8000', 'BYTEPS_SCHEDULING_CREDIT': '8000000', '_': '/usr/local/bin/bpslaunch', 'BYTEPS_LOCAL_SIZE': '4', 'DMLC_NUM_WORKER': '1', 'BYTEPS_SERVER_ENABLE_SCHEDULE': '1', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games', 'DMLC_ROLE': 'worker', 'SHELL': '/bin/bash', 'PWD': '/home/cluster', 'SSH_CONNECTION': '172.31.93.148 43668 172.31.93.148 2022', 'DMLC_WORKER_ID': '0', 'NVIDIA_VISIBLE_DEVICES': '0,1,2,3', 'BYTEPS_PARTITION_BYTES': '4096000'})=============3
+environ({'BYTEPS_LOCAL_RANK': '1', 'MAIL': '/var/mail/cluster', 'USER': 'cluster', 'SSH_CLIENT': '172.31.93.148 43668 2022', 'SHLVL': '1', 'HOME': '/home/cluster', 'DMLC_PS_ROOT_URI': '172.31.93.148', 'DISTRIBUTED_FRAMEWORK': 'byteps', 'DMLC_NUM_SERVER': '1', 'LOGNAME': 'cluster', 'DMLC_PS_ROOT_PORT': '8000', 'BYTEPS_SCHEDULING_CREDIT': '8000000', '_': '/usr/local/bin/bpslaunch', 'BYTEPS_LOCAL_SIZE': '4', 'DMLC_NUM_WORKER': '1', 'BYTEPS_SERVER_ENABLE_SCHEDULE': '1', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games', 'DMLC_ROLE': 'worker', 'SHELL': '/bin/bash', 'PWD': '/home/cluster', 'SSH_CONNECTION': '172.31.93.148 43668 172.31.93.148 2022', 'DMLC_WORKER_ID': '0', 'NVIDIA_VISIBLE_DEVICES': '0,1,2,3', 'BYTEPS_PARTITION_BYTES': '4096000'})=============1
+environ({'BYTEPS_LOCAL_RANK': '2', 'MAIL': '/var/mail/cluster', 'USER': 'cluster', 'SSH_CLIENT': '172.31.93.148 43668 2022', 'SHLVL': '1', 'HOME': '/home/cluster', 'DMLC_PS_ROOT_URI': '172.31.93.148', 'DISTRIBUTED_FRAMEWORK': 'byteps', 'DMLC_NUM_SERVER': '1', 'LOGNAME': 'cluster', 'DMLC_PS_ROOT_PORT': '8000', 'BYTEPS_SCHEDULING_CREDIT': '8000000', '_': '/usr/local/bin/bpslaunch', 'BYTEPS_LOCAL_SIZE': '4', 'DMLC_NUM_WORKER': '1', 'BYTEPS_SERVER_ENABLE_SCHEDULE': '1', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games', 'DMLC_ROLE': 'worker', 'SHELL': '/bin/bash', 'PWD': '/home/cluster', 'SSH_CONNECTION': '172.31.93.148 43668 172.31.93.148 2022', 'DMLC_WORKER_ID': '0', 'NVIDIA_VISIBLE_DEVICES': '0,1,2,3', 'BYTEPS_PARTITION_BYTES': '4096000'})=============2
