@@ -65,6 +65,16 @@ if __name__ == '__main__':
     from importlib import import_module
     net = import_module('symbols.'+args.network)
     sym = net.get_symbol(**vars(args))
+    
+    byteps_trace_on = int(os.environ.get('BYTEPS_TRACE_ON','0'))
+    if byteps_trace_on == 1:
+        mx.profiler.set_config(profile_all=True, filename='mxnet_timeline.json', continuous_dump=True, profile_process='worker')
+        mx.profiler.set_state('run')
 
     # train
     fit.fit(args, sym, data.get_rec_iter)
+
+    if byteps_trace_on == 1:
+        mx.profiler.set_state('stop')
+
+#    os._exit(1)
