@@ -2,9 +2,17 @@ export dmlc_num_server=1
 export dmlc_num_worker=1
 export nvidia_visible_devices=0
 export distributed_framework=byteps
+
+#schedule
+#export byteps_server_enable_schedule=1
+#export byteps_scheduling_credit=4
+#no-schedule
 export byteps_server_enable_schedule=0
-#export byteps_scheduling_credit=8
+# partition
 export byteps_partition_bytes=4096000
+#no-partition
+#export byteps_partition_bytes=480000000
+
 export dmlc_ps_root_uri=172.31.67.50
 export byteps_trace_on=1
 export byteps_trace_dir=/home/cluster/byteps/examples/mxnet/vgg-16
