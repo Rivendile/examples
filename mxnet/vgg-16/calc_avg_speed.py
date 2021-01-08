@@ -16,4 +16,4 @@ with open(filename, 'r') as file:
                     sum += float(line[i+1])
 
 print("total iters (include warmup):", cnt*10)
-print("average speed: ", sum/(cnt-warmup), " samples/sec/node.")
+print("average speed: ", sum/(cnt-warmup), " samples/sec/gpu.")
