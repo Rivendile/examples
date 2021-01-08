@@ -408,10 +408,10 @@ def train(data_train, data_eval, model):
 
             # saving checkpoints
             if (step_num + 1) % args.ckpt_interval == 0 and (batch_num + 1) % accumulate == 0:
-                if is_master_node:
-                    save_states(step_num, trainer, args.ckpt_dir, local_rank)
-                    if local_rank == 0:
-                        save_parameters(step_num, model.bert, args.ckpt_dir)
+#                if is_master_node:
+#                    save_states(step_num, trainer, args.ckpt_dir, local_rank)
+#                    if local_rank == 0:
+#                        save_parameters(step_num, model.bert, args.ckpt_dir)
                 if (step_num + 1) % args.eval_interval == 0 and data_eval:
                     # eval data is always based on a fixed npz file.
                     dataset_eval = get_pretrain_data_npz(data_eval, batch_size_eval,
@@ -420,10 +420,10 @@ def train(data_train, data_eval, model):
 
             batch_num += 1
 
-    if is_master_node:
-        save_states(step_num, trainer, args.ckpt_dir, local_rank)
-        if local_rank == 0:
-            save_parameters(step_num, model, args.ckpt_dir)
+#    if is_master_node:
+#        save_states(step_num, trainer, args.ckpt_dir, local_rank)
+#        if local_rank == 0:
+#            save_parameters(step_num, model, args.ckpt_dir)
     mx.nd.waitall()
     train_end_time = time.time()
     logging.info('Train cost={:.1f}s'.format(train_end_time - train_begin_time))
