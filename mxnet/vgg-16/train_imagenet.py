@@ -67,8 +67,10 @@ if __name__ == '__main__':
     sym = net.get_symbol(**vars(args))
     
     byteps_trace_on = int(os.environ.get('BYTEPS_TRACE_ON','0'))
+    byteps_dir = os.environ.get('BYTEPS_TRACE_DIR')
+#    print(byteps_dir, type(byteps_dir))
     if byteps_trace_on == 1:
-        mx.profiler.set_config(profile_all=True, filename='mxnet_timeline.json', continuous_dump=True, profile_process='worker')
+        mx.profiler.set_config(profile_all=True, filename=byteps_dir+'/mxnet_timeline.json', continuous_dump=True, profile_process='worker')
         mx.profiler.set_state('run')
 
     # train
@@ -76,5 +78,6 @@ if __name__ == '__main__':
 
     if byteps_trace_on == 1:
         mx.profiler.set_state('stop')
+        mx.profiler.dump_profile()
 
 #    os._exit(1)
