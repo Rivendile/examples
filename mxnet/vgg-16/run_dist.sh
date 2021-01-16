@@ -8,6 +8,7 @@ export distributed_framework=byteps
 #export byteps_scheduling_credit=4
 #no-schedule
 export byteps_server_enable_schedule=0
+#export byteps_scheduling_credit=0
 # partition
 #export byteps_partition_bytes=4096000
 #no-partition
