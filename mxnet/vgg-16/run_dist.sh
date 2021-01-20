@@ -4,19 +4,19 @@ export nvidia_visible_devices=0,1,2,3,4,5,6,7
 export distributed_framework=byteps
 
 #schedule
-#export byteps_server_enable_schedule=1
-#export byteps_scheduling_credit=4
+export byteps_server_enable_schedule=1
+export byteps_scheduling_credit=4
 #no-schedule
-export byteps_server_enable_schedule=0
-export byteps_scheduling_credit=0
+#export byteps_server_enable_schedule=0
+#export byteps_scheduling_credit=0
 # partition
-#export byteps_partition_bytes=4096000
+export byteps_partition_bytes=4096000
 #no-partition
-export byteps_partition_bytes=480000000
+#export byteps_partition_bytes=480000000
 
 export dmlc_ps_root_uri=172.31.36.234
 export byteps_trace_on=1
-export byteps_trace_dir=/home/cluster/byteps/examples/mxnet/vgg-16/test_trace
+export byteps_trace_dir=/home/cluster/byteps/examples/mxnet/vgg-16/vgg16-100-3
 export COMMAND='python3 /home/cluster/byteps/examples/mxnet/vgg-16/train_imagenet.py --network vgg --num-layers 16 --batch-size 32 --benchmark 1 --num-examples 3552 --num-epochs 1 --disp-batches 10'
 
 # scheduler
